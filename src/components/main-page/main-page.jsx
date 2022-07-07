@@ -1,9 +1,8 @@
-import React from "react";
-import CardComponent from "../card-component/card-component";
+import React from 'react';
+import CardComponent from '../card-component/card-component';
+import PropTypes from 'prop-types';
 
 const MainPage = ({cards, placesCount}) => {
-
-  // const { placesCount } = placesCount;
 
   return (
     <div className="page page--gray page--main">
@@ -105,6 +104,11 @@ const MainPage = ({cards, placesCount}) => {
       </main>
     </div>
   );
+};
+
+MainPage.propTypes = {
+  placesCount: PropTypes.string.isRequired,
+  cards: PropTypes.array.isRequired,
 };
 
 export default MainPage;
